@@ -1,0 +1,35 @@
+{
+  "schema": "meaw.component/v1",
+  "name": "mirofish",
+  "repository": "suryamayaharum-droid/MiroFish",
+  "role": "collective-simulation-engine",
+  "capabilities": [
+    "multi-agent-simulation",
+    "social-simulation",
+    "scenario-analysis",
+    "graph-world-model",
+    "simulation-reporting"
+  ],
+  "interfaces": {
+    "frontend": "http://localhost:3000",
+    "api": "http://localhost:5001"
+  },
+  "memory": {
+    "mode": "simulation-local",
+    "authority": false
+  },
+  "health": [
+    {"type": "manual", "note": "frontend/backend smoke test required"}
+  ],
+  "lifecycle": "pending",
+  "trust": "owned-fork",
+  "priority": 60,
+  "metadata": {
+    "ecosystem": "MEAW",
+    "target_system": "simulation-os",
+    "integration": "incubating-simulation-engine",
+    "promotion_requires": ["adapter", "cost-limits", "scenario-validation"],
+    "simulation_is_not_prediction": true,
+    "discovery_executes_commands": false
+  }
+}
